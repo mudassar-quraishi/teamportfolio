@@ -1,0 +1,550 @@
+/* General Body & Font Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa; /* Page background */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Boxed Layout Style */
+.boxed-layout {
+    max-width: 1200px;
+    margin: 2em auto;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* New Simple Header */
+/* Creative Header */
+.new-main-header {
+    background: #ffffff; /* Fallback for older browsers */
+    background: linear-gradient(to right, #ffffff, #f8f9fa); /* Subtle gradient */
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* Soft shadow for depth */
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Custom rule to move header text further left */
+.new-main-header .container {
+    max-width: none;
+}
+
+.new-main-header h1 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif; /* The new stylish font */
+    font-size: 1.9em; /* Slightly larger font */
+    font-weight: 600;
+    
+    /* A creative gradient text effect */
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Unified Content Section Style */
+.content-section {
+    padding: 50px 40px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    margin: 30px;
+}
+
+.content-section:first-child {
+    margin-top: 30px;
+}
+
+.content-section h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    background-color: #e9e9e9; /* Fallback color if the image fails to load */
+    height: 300px;
+    border-radius: 8px;
+    background-size: cover;     /* Ensures the image covers the area */
+    background-position: center;  /* Centers the image in the space */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hero-cta .btn {
+    margin-right: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    border: 1px solid #007BFF;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background-color: #f2f2f2;
+    text-decoration: none;
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    text-align: center;
+    color: #333;
+}
+
+.team-card:hover .team-photo-placeholder {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.team-photo-placeholder {
+    width: 120px;
+    height: 120px;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Services & Projects Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Service Card */
+.service-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+/* Styling for the SVG icons in the service cards */
+.service-card svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+/* Project Card */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+img.card-screenshot {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* This ensures the image covers the area without distortion */
+    display: block;    /* Good practice for images */
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0;
+}
+
+/* Contact Form Section */
+.contact-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+}
+
+/* Simple Footer */
+.site-footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #ddd;
+    color: #666;
+    font-size: 0.9em;
+}
+
+
+/* Profile Page Specifics */
+.profile-header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 3px solid #007BFF;
+}
+
+.profile-info h1 {
+    margin-bottom: 5px;
+}
+
+.profile-info p {
+    color: #666;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.team-nav {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.team-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.team-nav-links a {
+    background: #e9ecef;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.team-nav-links a.active, .team-nav-links a:hover {
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+.certificate-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.certificate-thumbnail {
+    height: 120px;
+    width: 100%;
+    background-color: #e9e9e9;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    object-fit: cover; /* This makes the image fit perfectly */
+    display: block;
+}
+
+/* Profile Page - Social Links */
+.profile-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between button and icons */
+    margin-top: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    line-height: 0; /* Helps align SVG icons */
+}
+
+.social-links svg {
+    width: 28px;
+    height: 28px;
+    fill: #555; /* Icon color */
+    transition: fill 0.3s ease;
+}
+
+.social-links a:hover svg {
+    fill: #007BFF; /* Icon color on hover */
+}
+/* Styling for the team member images */
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;   /* Ensures the image covers the area without distortion */
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Project card status label */
+.project-status {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #333;
+    font-size: 0.75em;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Styling for the new icon in the header */
+.header-content {
+    display: flex;
+    align-items: center; /* Vertically aligns the icon and title */
+    gap: 12px;           /* Adds a small space between the icon and title */
+}
+
+.header-content svg {
+    /* Sets the color of the icon to match the blue in the title */
+    fill: #007BFF;
+}
+
+/* New Interactive Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.skill-card {
+    background-color: #f8f9fa;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.skill-card svg {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+    fill: #007BFF;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.skill-card p {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* New Centered Grid for Certificates */
+
+
+/* Make the certificate card a specific width */
+.certificate-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Add styling for the new certificate title */
+.certificate-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: #333;
+}
+
+/* Education Section */
+.education-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 3px;
+    background-color: #007BFF;
+}
+
+.education-item {
+    padding-left: 50px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid #007BFF;
+}
+
+.education-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.4em;
+    color: #333;
+}
+
+.education-item p {
+    margin: 0;
+    color: #666;
+    font-style: italic;
+}
