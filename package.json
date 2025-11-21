@@ -1,0 +1,22 @@
+{
+  "name": "team-portfolio",
+  "version": "1.0.0",
+  "description": "Team Portfolio with Tailwind CSS and ES6 Modules",
+  "scripts": {
+    "start": "npm run watch:css",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [
+    "tailwind",
+    "es6",
+    "portfolio"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  }
+}
